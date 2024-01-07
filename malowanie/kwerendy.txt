@@ -1,0 +1,29 @@
+Zapytanie 1: wybierające jedynie cenę i pojemność czerwonej puszki farby 
+
+SELECT farby.cena, farby.pojemnosc
+FROM farby
+WHERE kolor = 'czerwony';
+
+Zapytanie  2:  wybierające  jedynie  kolor  oraz  cenę  jednego  litra  farby,  wyliczoną  z  pól  cena 
+i pojemnosc dla wszystkich farb. Cena jednego litra farby powinna być podpisana jako „cena 
+jednostkowa” 
+
+SELECT farby.kolor, farby.cena, farby.cena / farby.pojemnosc AS 'cena jednostkowa'
+FROM farby;
+
+Zapytanie  3:  wybierające  jedynie  nazwy  kolorów  farb  i  liczbę  puszek  dla  pomieszczenia 
+o identyfikatorze 3 
+
+SELECT farby.kolor, malowanie.liczba_puszek
+FROM farby, malowanie
+WHERE malowanie.id_pomieszczenia = 3 AND farby.id_farby = malowanie.id_farby;
+
+Zapytanie 4: tworzące widok (perspektywę) o nazwie pomieszczenie1, w którym znajdują się jedynie pola  
+id_sciany,  id_farby,  liczba_puszek  dla  pomieszczenia  o  id  równym  1.  
+Aby udokumentować poprawność wykonania zapytania na zrzucie  ekranu  o  nazwie  kw4
+powinien znajdować się otwarty widok pomieszczenie1 z drzewa Widoki 
+
+CREATE VIEW pomieszczenie1 AS
+SELECT malowanie.id_sciany, malowanie.id_farby, malowanie.liczba_puszek
+FROM malowanie
+WHERE malowanie.id_pomieszczenia = 1;

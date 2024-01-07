@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>malarz</title>
+
+    <link rel="stylesheet" href="styl_1.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Malowanie pokoi i biur</h1>
+    </header>
+
+    <section id="left">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="mieszamy.html">Mieszamy</a></li>
+            <li><a href="cena.html">Wyceniamy</a></li>
+        </ul>
+    </section>
+    <section id="center">
+        <h2>Zapotrzebowanie na farbę</h2>
+        Powierzchnia malowania (m2)
+        <input type="number" name="area" id="area">
+        <button id="count-button">Policz</button>
+        <p id="outcome"></p>
+    </section>
+    <section id="right"><img width="300" height="300" src="obraz.png" alt="Próbki farb"></section>
+
+    <footer>
+        <h3>MALARZ</h3>
+        <p>Stronę opracował: biskup jebie gowno</p>
+    </footer>
+
+    <script>
+        document.getElementById('count-button').addEventListener('click', () => {
+            const area = document.getElementById('area').value;
+            const paintCount = Math.ceil(area / 4)
+
+            document.getElementById('outcome').innerText = `Liczba potrzebnych puszek: ${paintCount}`
+        })
+    </script>
+</body>
+
+</html>
