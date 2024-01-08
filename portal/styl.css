@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+
+    font-family: Georgia;
+}
+
+header {
+    height: 20px;
+
+    background-color: #005b4f;
+    color: white;
+
+    text-align: center;
+    font-size: 50%;
+}
+
+main {
+    height: 400px;
+
+    padding: 20px;
+
+    background-color: #e1e2e1;
+
+    overflow-y: scroll;
+}
+
+.zdjecie {
+    width: 20%;
+
+    float: left;
+}
+
+.opis {
+    float: left;
+}
+
+.linia {
+    clear: both;
+
+    border-bottom: 1px solid black;
+}
+
+footer {
+    width: 50%;
+    height: 20px;
+
+    float: left;
+
+    background-color: #005b4f;
+    color: white;
+
+    text-align: center;
+}
+
+img {
+    padding: 20px;
+
+    border-radius: 100%;
+}
+
+h2 {
+    background-color: #00897B;
+
+    text-align: center;
+}
+
+a {
+    color: white;
+}

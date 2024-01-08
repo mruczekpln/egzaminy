@@ -1,0 +1,26 @@
+Zapytanie 1: wybierające jedynie pola imie, nazwisko, opis, zdjecie z tabeli osoby, dla wszystkich osób, których Hobby_id jest jedną z wartości: 1, 2, 6
+
+SELECT osoby.imie, osoby.nazwisko, osoby.opis, osoby.zdjecie
+FROM osoby
+WHERE osoby.hobby_id IN (1, 2, 6);
+
+Zapytanie 2: wybierające jedynie pola id i nazwisko z tabeli osoby oraz odpowiadające im pole nazwa z tabeli hobby dla osób, które urodziły się po 2000 roku
+
+SELECT osoby.id, osoby.nazwisko, hobby.nazwa
+FROM osoby, hobby
+WHERE osoby.hobby_id = hobby.id AND osoby.rok_urodzenia > 2000;
+
+Zapytanie 3: wybierające jedynie pola id i zdjecie z tabeli osoby dla osób, które mają na imię Monika. Kwerenda wybiera pierwsze 5 wierszy, należy jawnie wskazać liczbę wierszy
+
+SELECT osoby.id, osoby.zdjecie
+FROM osoby
+WHERE osoby.imie = 'Monika'
+LIMIT 5;
+
+Zapytanie 4: tworzące tabelę o nazwie wpisy z następującymi polami: id, klucz główny jawnie zapisany, typu całkowitego dodatniego, automatycznie inkrementowany, nie może przyjmować wartości pustych wpis typu tekstowego uzytkownik_id typu całkowitego dodatniego, nie może przyjmować wartości pustych
+
+CREATE TABLE wpisy (
+    id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    wpis TEXT,
+    uzytkownik_id INT UNSIGNED NOT NULL
+);
