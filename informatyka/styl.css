@@ -1,0 +1,67 @@
+body {
+  background-color: #eeeeee;
+
+  font-family: Helvetica;
+}
+
+#container {
+  width: 90%;
+
+  margin: auto;
+}
+
+#logo,
+menu {
+  width: 50%;
+  height: 100px;
+
+  margin: 0;
+  padding: 10px 0;
+
+  float: left;
+
+  background-color: lightblue;
+}
+
+header {
+  height: 200px;
+
+  clear: both;
+
+  background-color: #dddddd;
+}
+
+main {
+  height: 400px;
+
+  margin: 50px;
+
+  color: navy;
+}
+
+footer {
+  padding: 10px;
+
+  background-color: lightblue;
+
+  text-align: right;
+}
+
+button {
+  background-color: lightblue;
+  color: navy;
+}
+
+menu > a {
+  margin: 10px;
+  padding: 5px;
+
+  color: navy;
+  font-size: 150%;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+menu > a:hover {
+  border: 1px solid navy;
+}
