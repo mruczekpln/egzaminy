@@ -1,0 +1,21 @@
+1.
+
+SELECT podzespoly.nazwa, podzespoly.opis, podzespoly.cena
+FROM podzespoly
+WHERE podzespoly.typy_id = 1;
+
+2. 
+
+SELECT podzespoly.id, podzespoly.nazwa
+FROM podzespoly
+WHERE podzespoly.dostepnosc = 1 AND podzespoly.cena < 400;
+
+3.
+
+SELECT podzespoly.nazwa, typy.kategoria
+FROM podzespoly, typy 
+WHERE podzespoly.typy_id = typy.id AND typy.kategoria = 'Procesor';
+
+4. 
+
+ALTER TABLE typy ADD opis TEXT;

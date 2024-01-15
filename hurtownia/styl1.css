@@ -1,0 +1,55 @@
+body {
+  font-family: Verdana;
+}
+
+section {
+  height: 270px;
+
+  float: left;
+
+  background-color: #ff9f79;
+}
+
+#logo {
+  width: 30%;
+}
+
+#list,
+#form {
+  width: 35%;
+
+  color: green;
+}
+
+main {
+  height: 400px;
+
+  padding: 30px;
+
+  clear: both;
+
+  background-color: #80cdac;
+
+  text-align: center;
+}
+
+footer {
+  height: 150px;
+
+  padding: 10px;
+
+  background-color: #188256;
+}
+
+a:link {
+  background-color: green;
+
+  margin: 10px;
+  padding: 10px;
+
+  border: 2px solid orange;
+}
+
+a:visited {
+  background-color: violet;
+}
